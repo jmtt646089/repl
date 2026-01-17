@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "name": "Scribbler jsnb",
+    "language_info": {
+      "name": "JavaScipt",
+      "version": "8.0"
+    }
+  },
+  "jsnbversion": "v0.1",
+  "cells": [
+    {
+      "code": "test for hahahah",
+      "status": "",
+      "output": "<p>test for hahahah</p>\n",
+      "type": "html"
+    },
+    {
+      "code": "const h1el = document.querySelector(\"#input9 > div > div.CodeMirror-scroll > div.CodeMirror-sizer > div\");\n\n\nh1el.textContent = \"New nn Text\";\n\n\n// 1. Create the script element\nconst script = document.createElement('script');\n\n// 2. Set the src attribute to the external script file URL\nscript.src = 'https://cdn.jsdelivr.net/npm/puppeteer@24.35.0/+esm'; \nscript.type = \"module\";\n\ndocument.head.appendChild(script);\n\n",
+      "status": "[75]<br><span style=\"font-size:8px\">1ms<span></span></span>",
+      "output": "{} <br>",
+      "type": "code"
+    },
+    {
+      "code": "await scrib.loadScript(\"https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js\")",
+      "status": "[76]<br><span style=\"font-size:8px\">4ms<span></span></span>",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "//>html\n<canvas id=\"myChart\"></canvas>",
+      "status": "[77]<br><span style=\"font-size:8px\">0ms<span></span></span>",
+      "output": "\n<canvas id=\"myChart\" width=\"1270\" height=\"635\" style=\"display: block; box-sizing: border-box; height: 635px; width: 1270px;\"></canvas> <br>",
+      "type": "code"
+    },
+    {
+      "code": "const ctx = document.getElementById('myChart').getContext('2d');\n      new Chart(ctx, {\n        type: 'line',\n        data: {\n          labels: ['January', 'February', 'March', 'April', 'May'],\n          datasets: [{\n            label: 'Sales',\n            data: [10, 20, 15, 25, 30],\n            borderColor: 'blue',\n            backgroundColor: 'rgba(0,0,255,0.1)',\n            fill: true\n          }]\n        },\n        options: {\n          responsive: true,\n          plugins: {\n            title: {\n              display: true,\n              text: 'Monthly Sales'\n            }\n          }\n        }\n      });\n0",
+      "status": "[78]<br><span style=\"font-size:8px\">30ms<span></span></span>",
+      "output": "0 <br>",
+      "type": "code"
+    },
+    {
+      "code": "scrib.loadScript(\"https://unpkg.com/leaflet/dist/leaflet.js\",false)\n\nvar map = L.map('map').setView([95.5, -0.09], 13);\n\n// Add a base tile layer from OpenStreetMap\nconst dummy=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {\n  attribution: '&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors'\n}).addTo(map);\n",
+      "status": "[-]",
+      "output": "<p class=\"error\">Map container not found.</p>",
+      "type": "code"
+    },
+    {
+      "code": "",
+      "status": "[-]",
+      "output": "<p class=\"error\">Map container not found.</p>",
+      "type": "code"
+    },
+    {
+      "code": "// Add a marker to the map\nvar marker = L.marker([95.5, -0.09]).addTo(map);\n\n// Add a popup to the marker\nconst l=marker.bindPopup(\"<b>Hello world!</b><br>This is a Leaflet marker.\").openPopup();\n",
+      "status": "[-]",
+      "output": "<p class=\"error\">Cannot read properties of undefined (reading 'addLayer')</p>",
+      "type": "code"
+    }
+  ],
+  "source": "https://github.com/gopi-suvanam/scribbler",
+  "run_on_load": false
+}
